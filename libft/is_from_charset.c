@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   is_from_charset.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
+/*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2023/01/23 18:54:17 by bpoumeau          #+#    #+#             */
+/*   Updated: 2023/01/23 18:54:21 by bpoumeau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
+#include "libft.h"
 
-# include "libft.h"
-
-#endif
+int	is_from(char c, char *base)
+{
+	while (*base && c != *base)
+		base++;
+	if (*base == c)
+		return (1);
+	return (0);
+}

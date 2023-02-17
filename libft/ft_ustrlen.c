@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   ft_ustrlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
+/*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2023/02/05 01:46:18 by bpoumeau          #+#    #+#             */
+/*   Updated: 2023/02/05 01:46:20 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
+#include "libft.h"
 
-# include "libft.h"
+size_t	ft_ustrlen(t_uchar *str)
+{
+	t_uchar	*tmp;
 
-#endif
+	tmp = str;
+	while (*tmp)
+		tmp++;
+	return (tmp - str);
+}

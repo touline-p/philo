@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
+/*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2022/11/08 13:19:49 by bpoumeau          #+#    #+#             */
+/*   Updated: 2022/11/10 18:22:56 by bpoumeau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
+#include "libft.h"
 
-# include "libft.h"
+void	*ft_memchr(void *buf, int ch, size_t length)
+{
+	unsigned char	*dst;
 
-#endif
+	dst = buf;
+	while (length && *dst != (unsigned char)ch)
+	{
+		dst++;
+		length--;
+	}
+	if (!length)
+		return ((void *)0);
+	return ((void *)dst);
+}

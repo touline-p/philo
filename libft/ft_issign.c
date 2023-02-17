@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
+/*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2022/12/14 16:51:30 by bpoumeau          #+#    #+#             */
+/*   Updated: 2022/12/14 16:51:33 by bpoumeau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
-
-# include "libft.h"
-
-#endif
+int	ft_issign(int c)
+{
+	if (c == '-' || c == '+')
+		return (1);
+	return (0);
+}

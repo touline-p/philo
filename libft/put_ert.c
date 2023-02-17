@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   put_ert.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
+/*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2023/02/13 19:11:04 by bpoumeau          #+#    #+#             */
+/*   Updated: 2023/02/13 19:11:11 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
+#include "libft.h"
 
-# include "libft.h"
-
-#endif
+void	put_ert(t_ert code)
+{
+	if (code == SUCCESS)
+		write(1, "SUCCESS\n", 8);
+	if (code == FAILURE)
+		write(1, "FAILURE\n", 8);
+	if (code == MLC_ERR)
+		write(1, "MLC_ERR\n", 8);
+}

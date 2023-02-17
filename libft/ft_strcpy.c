@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo.h                                            :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:04:43 by bpoumeau         ###   ########.fr       */
+/*   Created: 2023/02/15 18:35:57 by bpoumeau          #+#    #+#             */
+/*   Updated: 2023/02/15 18:41:11 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_HILO_H
-# define PHILO_HILO_H
+char	*ft_strcpy(char *dst, char *src)
+{
+	char	*pin;
 
-# include "libft.h"
+	pin = dst;
+	while (*src)
+	{
+		*pin = *src;
+		pin++;
+		src++;
+	}
+	*pin = 0;
+	return (dst);
+}
 
-#endif
+char	*ft_strcpy_rn(char *dst, char *src)
+{
+	while (*src)
+	{
+		*dst = *src;
+		dst++;
+		src++;
+	}
+	*dst = *src;
+	return (dst);
+}
