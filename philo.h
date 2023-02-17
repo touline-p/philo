@@ -14,6 +14,7 @@
 # define PHILO_HILO_H
 
 # include "libft/libft.h"
+# include <pthread.h>
 
 typedef struct s_philo_id
 {
