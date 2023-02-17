@@ -6,7 +6,7 @@
 /*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 16:59:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 17:15:33 by bpoumeau         ###   ########.fr       */
+/*   Updated: 2023/02/17 17:20:54 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ typedef struct s_philo_id
 }	t_philo_id;
 
 /*** INIT ***/
+
+# define INVALID_ARG_CODE -1
+
 /**
  * @param pattern_ptr
  * @param arguments
