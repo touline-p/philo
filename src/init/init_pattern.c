@@ -6,29 +6,28 @@
 /*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 17:19:06 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/17 18:15:13 by bpoumeau         ###   ########.fr       */
+/*   Updated: 2023/02/20 11:57:57 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../../philo.h"
 
-t_ert	init_pattern(t_pilo_id *pattern_ptr, char **arguments)
+t_ert	_check_then_atoi_on(char *msg, int *int_pt);
+
+t_ert	init_pattern(t_parsed_args *pattern_ptr, char **arguments)
 {
-	pattern_ptr->ttd = _check_then_atoi(arguments[0]);	
-	if (pattern_ptr->ttd == INVALID_ARG_CODE)
-		return (FAILURE);
-	pattern_ptr->tte = _check_then_atoi(arguments[1]);	
-	if (pattern_ptr->tte == INVALID_ARG_CODE)
-		return (FAILURE);
-	pattern_ptr->tts = _check_then_atoi(arguments[2]);	
-	if (pattern_ptr->tts == INVALID_ARG_CODE)
+	if (_check_then_atoi_on(arguments[0], &philo_nb)
+			|| pattern_ptr->philo_nb > 1024)
+			|| _check_then_atoi_on(arguments[1], &pattern_ptr->ttd)
+			|| _check_then_atoi_on(arguments[2], &pattern_ptr->tte)
+			|| _check_then_atoi_on(arguments[3], pattern_ptr->tts))
 		return (FAILURE);
 	return (SUCCESS);
 }
 
-int	_check_then_atoi(char *msg)
+t_ert	_check_then_atoi_on(char *msg, int *int_pt)
 {
-	if (!str_is_made_of(mst, "0123456789")
-		return  (INVALID_ARG_CODE);
-	return (ft_atoi(msg));
+	if (!str_is_made_of(msg, "0123456789"))
+		return  (FAILURE);
+	return (ft_atoi_on(msg, int_pt));
 }
