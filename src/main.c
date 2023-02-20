@@ -6,7 +6,7 @@
 /*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 16:58:21 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/20 14:36:40 by bpoumeau         ###   ########.fr       */
+/*   Updated: 2023/02/20 15:46:20 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int ac, char *av[])
 	if (init_mutex(args, m_forks, &m_display))
 		return (_main_ending_process("Can't init mutex.\n"));
 	if (init_threads(args, m_fork, m_display, philo_id))
-		return (_main_ending_process("error initializing threads.\n"));
+		return (_main_ending_process("Error initializing threads.\n"));
 	return (0);
 }
 

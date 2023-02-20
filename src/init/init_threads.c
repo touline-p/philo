@@ -6,7 +6,7 @@
 /*   By: bpoumeau <bpoumeau@student.42lyon.f>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 12:22:53 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/02/20 15:48:03 by bpoumeau         ###   ########.fr       */
+/*   Updated: 2023/02/20 15:53:48 by bpoumeau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ t_ert	init_threads(t_parsed_args args, pthread_mutex_t *m_forks, pthread_mutex_t
 			return (_init_thread_err_process(++indx, philo_id, m_forks, m_display));
 		indx++;
 	}
+	return (SUCCESS);
 }
 
 static void	_init_tlset(t_parsed_args args, pthread_mutex_t *m_forks, pthread_mutex_t m_display,
